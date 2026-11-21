@@ -110,6 +110,19 @@
     .burger{display:block}
     section{padding:52px 0}
   }
+
+  /* Headshot and responsive hero layout */
+  .hero-content{display:flex;align-items:center;gap:42px}
+  .hero-profile{display:block;flex:0 0 176px;width:176px;height:176px;border-radius:50%;object-fit:cover;object-position:center 25%;border:4px solid rgba(255,255,255,.8);box-shadow:0 12px 30px rgba(2,6,23,.28)}
+  .hero-copy{min-width:0}
+  @media (max-width:640px){
+    .hero-content{flex-direction:column;align-items:center;gap:26px;text-align:center}
+    .hero .lede{margin-left:auto;margin-right:auto}
+    .btnrow{justify-content:center}
+  }
+  /* Keep interactions understated and professional */
+  .btn:hover{transform:none}
+  .card:hover{transform:none;box-shadow:0 8px 24px rgba(15,23,42,.06)}
 </style>
 </head>
 <body>
@@ -130,7 +143,7 @@
 </nav>
 
 <header class="hero">
-  <div class="wrap">
+  <div class="wrap"><div class="hero-content"><img class="hero-profile" src="profile.jpg" alt="Portrait of Dr. Sathish Kumar" width="176" height="176"><div class="hero-copy">
     <span class="badge">Open to AI Engineer &amp; Data Scientist roles · Bengaluru</span>
     <h1>Dr. Sathish Kumar</h1>
     <div class="tagline">Deep Learning &amp; Computer Vision, from research to production</div>
@@ -141,7 +154,7 @@
       <a class="btn btn-ghost" href="https://github.com/SathishKumar2425" target="_blank" rel="noopener">GitHub</a>
       <a class="btn btn-ghost" href="https://orcid.org/0000-0001-9374-1980" target="_blank" rel="noopener">ORCID</a>
     </div>
-  </div>
+  </div></div></div>
 </header>
 
 <section id="about">
